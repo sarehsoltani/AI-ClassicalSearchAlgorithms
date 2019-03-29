@@ -89,20 +89,18 @@ class Problem():
     def step_cost(self, current_state, next_state):
         return 1
 
-
 p = Problem()  
 SearchAlgorithms = ClassicSearchAlgorithm(p)
 
 if __name__ =='__main__':
-    
-        print("search strategies:")
-        print("\t(1) BFS")
-        print("\t(2) DFS")
-        selection = int(input("Select the search strategy you would like to use: "))
-        if(selection==1):
-           SearchAlgorithms.TBFS(p.initialState())                             
-        elif(selection==2):
-           SearchAlgorithms.tree_depth_first_search(p.initialState()) 
-        else:
-            print("invalid selection")
-            sys.exit()
+    print("search strategies:")
+    print("\t(1) BFS")
+    print("\t(2) DFS")
+    selection = int(input("Select the search strategy you would like to use: "))
+    if(selection==1):
+        SearchAlgorithms.TBFS(p.initialState())                             
+    elif(selection==2):
+        SearchAlgorithms.tree_depth_first_search(p.initialState()) 
+    else:
+         print("invalid selection")
+         sys.exit()
