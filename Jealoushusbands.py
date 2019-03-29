@@ -91,7 +91,7 @@ class Problem():
 
 
 p = Problem()  
-csa = ClassicSearchAlgorithm(p)
+SearchAlgorithms = ClassicSearchAlgorithm(p)
 
 if __name__ =='__main__':
     
@@ -100,9 +100,9 @@ if __name__ =='__main__':
         print("\t(2) DFS")
         selection = int(input("Select the search strategy you would like to use: "))
         if(selection==1):
-           csa.TBFS(p.initialState())                             
+           SearchAlgorithms.TBFS(p.initialState())                             
         elif(selection==2):
-           csa.tree_depth_first_search(p.initialState()) 
+           SearchAlgorithms.tree_depth_first_search(p.initialState()) 
         else:
             print("invalid selection")
             sys.exit()
