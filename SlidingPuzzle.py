@@ -1,6 +1,5 @@
 from __future__ import print_function
 from SearchAlgorithms.ClassicSearchAlgorithms import *
-from SearchAlgorithms.BeyondClassicSearchAlgorithm import *
 from copy import deepcopy
 import numpy as np
 
@@ -158,7 +157,6 @@ class Problem():
 
 p = Problem()
 csa = ClassicSearchAlgorithm(p)
-bcsa = BeyondClassicSearchAlgorithm(p)
 
 if __name__ =='__main__':
     while(True):
@@ -174,9 +172,9 @@ if __name__ =='__main__':
         elif(selection==2):
             csa.graph_breadth_first_search(p.initialState())
         elif(selection==3):
-            bcsa.graph_a_star(p.initialState())                    
+            csa.graph_a_star(p.initialState())                    
         elif(selection==4):
-            bcsa.tree_a_star(p.initialState()) 
+            csa.tree_a_star(p.initialState()) 
         elif(selection==5):
              csa.TBFS(p.initialState())                 
         else:
