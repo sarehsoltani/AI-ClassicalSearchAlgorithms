@@ -156,7 +156,7 @@ class Problem():
         print()
 
 p = Problem()
-csa = ClassicSearchAlgorithm(p)
+SearchAlgorithms = ClassicSearchAlgorithm(p)
 
 if __name__ =='__main__':
     while(True):
@@ -168,15 +168,15 @@ if __name__ =='__main__':
         print("\t(5) Tree BFS")
         selection = int(input("Select the search strategy you would like to use: "))
         if(selection==1):
-            csa.tree_uniform_cost_search(p.initialState())                         
+            SearchAlgorithms.tree_uniform_cost_search(p.initialState())                         
         elif(selection==2):
-            csa.graph_breadth_first_search(p.initialState())
+            SearchAlgorithms.graph_breadth_first_search(p.initialState())
         elif(selection==3):
-            csa.graph_a_star(p.initialState())                    
+            SearchAlgorithms.graph_a_star(p.initialState())                    
         elif(selection==4):
-            csa.tree_a_star(p.initialState()) 
+            SearchAlgorithms.tree_a_star(p.initialState()) 
         elif(selection==5):
-             csa.TBFS(p.initialState())                 
+             SearchAlgorithms.TBFS(p.initialState())                 
         else:
             print("invalid selection")
             sys.exit()
